@@ -1,3 +1,10 @@
-.terraform
-*.tfstate
-*.tfstate.backup
+
+.idea
+
+blog-gruntwork-io.iml
+
+
+**/.terraform
+**/.terraform.lock.hcl
+
+**/terraform.tfstate

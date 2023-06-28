@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_db_instance" "example" {
-  identifier_prefix   = "terraform-up-and-running-stage"
+  identifier_prefix   = "terraform-up-and-running-prod"
   engine              = "mysql"
   allocated_storage   = 10
   instance_class      = "db.t2.micro"
@@ -17,7 +17,7 @@ resource "aws_db_instance" "example" {
 terraform {
   backend "s3" {
     bucket         = "terraform-tutorial-bucket-jabt"
-    key            = "stage/data-stores/mysql/terraform.tfstate"
+    key            = "prod/data-stores/mysql/terraform.tfstate"
     region         = "us-east-2"
 
     dynamodb_table = "terraform-tutorial-locks-table-jabt"
